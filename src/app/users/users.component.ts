@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../services/auth.service';
+import { UpdatepopupComponent } from '../updatepopup/updatepopup.component';
 // import { MatTableDataSource } from '@angular/material/table';
 
 
@@ -15,18 +16,24 @@ export class UsersComponent {
   }
 
   users:any;
-  // displayedColumns: string[] = ['username', 'name', 'email', 'role','status', 'action'];
   dataSource:any;
   
 
   loadUser(){
     this.authService.getUsers().subscribe(res => {
       this.users = res;
-      // this.dataSource =  new MatTableDataSource(this.users);
     })
   }
   
   updateUser(code:any){
+    
+
+    
+  }
+
+  openPopup(){
+
 
   }
+
 }

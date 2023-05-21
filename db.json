@@ -3,11 +3,30 @@
     {
       "id": "admin",
       "name": "Admin user",
-      "contact": "0738120835",
+      "contact": "0123456789",
       "password": "Test$1234",
-      "email": "givencingco@gmail.com",
+      "email": "given@gmail.com",
+      "role": "admin",
+      "status": true
+    },
+    {
+      "id": "admin",
+      "name": "Admin user",
+      "contact": "0123456789",
+      "password": "Test$1234",
+      "email": "tom@gmail.com",
+      "role": "admin",
+      "status": true
+    },
+    {
+      "id": "admin",
+      "name": "Admin user",
+      "contact": "0123456789",
+      "password": "Test$1234",
+      "email": "doe@gmail.com",
       "role": "admin",
       "status": true
     }
+     
   ]
 }
