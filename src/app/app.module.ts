@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { UsersComponent } from './users/users.component';
 import { UpdatepopupComponent } from './updatepopup/updatepopup.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { UpdatepopupComponent } from './updatepopup/updatepopup.component';
     LoginComponent,
     HomeComponent,
     UsersComponent,
-    UpdatepopupComponent
+    UpdatepopupComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
