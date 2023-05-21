@@ -1,0 +1,13 @@
+{
+  "user": [
+    {
+      "id": "admin",
+      "name": "Admin user",
+      "contact": "0738120835",
+      "password": "Test$1234",
+      "email": "givencingco@gmail.com",
+      "role": "admin",
+      "status": true
+    }
+  ]
+}

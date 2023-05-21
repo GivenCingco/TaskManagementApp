@@ -1,0 +1,60 @@
+<section>
+    <div class="container">
+        <div class="row justify-content-sm-center h-100">
+            <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
+                <div class="card shadow-lg my-5">
+                    <div class="card-body">
+                        <h1 class="fs-4 card-title fw-bold mb-4 text-center">Register</h1>
+                        <form [formGroup]="loginForm" (ngSubmit)="login()">
+                            <div class="mb-3">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                    </span>
+                                    <input type="text" class="form-control" formControlName="username" placeholder="Username"
+                                        aria-label="username" aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                            <!-- <div class="mb-3">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    </span> 
+                                    <input type="text" class="form-control" formControlName="email" placeholder="Email Address"
+                                        aria-label="email" aria-describedby="basic-addon1">
+                                </div>
+                            </div> -->
+                            <div class="mb-3">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <i class="fa fa-key" aria-hidden="true"></i>
+                                    </span>
+                                    <input type="password" class="form-control" placeholder="Password" formControlName="password"
+                                        aria-label="Password" aria-describedby="basic-addon1">
+                                        <div class="invalid-feedback">
+                                            Password must contain at least one lowercase letter, one uppercase letter, one digit, one special character ($, @, !, %, *, ?, &), and be at least 8 characters long.
+                                          </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center">
+                                <div class="d-grid gap-2 col-12 ">
+                                    <button class="btn btn-primary" type="submit">Login</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="form-group col-lg-8 mx-auto d-flex align-items-center">
+                        <div class="border-bottom w-100 ml-5"></div>
+                        <span class="px-3 small text-muted font-weight-bold text-muted">OR</span>
+                        <div class="border-bottom w-100 mr-5"></div>
+                    </div>
+                    <div class="text-center w-100">
+                        <p class="text-muted font-weight-bold login-link">Do not have an account? 
+                        <a routerLink="/register" class="text-primary ml-2">Register</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

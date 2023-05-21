@@ -1,0 +1,29 @@
+*, ::after, ::before {
+    -webkit-box-sizing: initial;
+    -moz-box-sizing: initial;
+    box-sizing:content-box;
+
+}
+
+
+
+section {
+    margin-top: 150px;
+}
+
+/* .login-link{
+    font-size
+} */
+
+.login-link a {
+text-decoration: none;
+}
+
+.card-body {
+    margin: 10px;
+}
+
+/* .container  {
+justify-content: center; 
+align-items: center; 
+} */
