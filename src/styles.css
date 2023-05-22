@@ -1,9 +1,14 @@
 /* based on angular-toastr css https://github.com/Foxandxss/angular-toastr/blob/cb508fe6801d6b288d3afc525bb40fee1b101650/dist/angular-toastr.css */
 
-
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/Montserrat/static/Montserrat-BlackItalic.ttf');
+}
 
 body{
-  font-family: 'Montserrat', sans-serif;}
+  font-family: 'Montserrat'!important;
+  background-color: #f5f5f5;
+}
 
 /* position */
 .toast-center-center {

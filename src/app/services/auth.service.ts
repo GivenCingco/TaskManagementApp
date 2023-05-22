@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +22,10 @@ export class AuthService {
     return  this.http.get(this.apiURL + '/' + code);
   }
 
+  getAllRoles(){
+    return  this.http.get('http://localhost:3000/role');
+  }
+
   //Register user to Database
   registration(inputdata:any ){
     return this.http.post(this.apiURL, inputdata);
@@ -27,8 +33,14 @@ export class AuthService {
 
   //Update users details
   updateUser(code:any,inputdata:any){
-    return this.http.put(this.apiURL + '/' + code, inputdata);
+    // return this.http.put(this.apiURL + '/' + code, inputdata);
+    return this.http.patch(`${this.apiURL}/${code}`, inputdata);
 
+
+  }
+
+  deleteUser(code:any){
+    return this.http.delete(this.apiURL + '/' + code);
   }
 
   //Check if user is looged in

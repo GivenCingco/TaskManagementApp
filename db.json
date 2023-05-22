@@ -2,31 +2,35 @@
   "user": [
     {
       "id": "admin",
-      "name": "Admin user",
+      "name": "General user",
       "contact": "0123456789",
-      "password": "Test$1234",
-      "email": "given@gmail.com",
+      "password": "Test$12345",
+      "email": "johndoe@gmail.com",
       "role": "admin",
       "status": true
     },
     {
-      "id": "admin",
+      "id": "user",
       "name": "Admin user",
-      "contact": "0123456789",
-      "password": "Test$1234",
-      "email": "tom@gmail.com",
-      "role": "admin",
-      "status": true
-    },
-    {
-      "id": "admin",
-      "name": "Admin user",
-      "contact": "0123456789",
+      "contact": "0123456783",
       "password": "Test$1234",
       "email": "doe@gmail.com",
       "role": "admin",
       "status": true
     }
-     
+  ],
+  "role": [
+    {
+      "code": "HR",
+      "name": "HR"
+    },
+    {
+      "code": "IT",
+      "name": "IT"
+    },
+    {
+      "code": "Finance",
+      "name": "Finance"
+    }
   ]
 }

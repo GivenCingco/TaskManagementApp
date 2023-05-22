@@ -6,6 +6,8 @@ import { LoginComponent } from './login/login.component';
 import { UsersComponent } from './users/users.component';
 import { AuthGuard } from './guard/auth.guard';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { UpdatepopupComponent } from './updatepopup/updatepopup.component';
+
 
 
 const routes: Routes = [
@@ -13,6 +15,7 @@ const routes: Routes = [
   {path:'login', component:LoginComponent},
   {path:'users', component:UsersComponent, canActivate:[AuthGuard]},
   {path:'register', component:RegisterComponent},
+  {path:'update/:code', component:UpdatepopupComponent},
   { path: '**', redirectTo: '/not-found' },
   { path: 'not-found', component: NotFoundComponent },
 ];

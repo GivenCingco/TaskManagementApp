@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { UpdatepopupComponent } from '../updatepopup/updatepopup.component';
-// import { MatTableDataSource } from '@angular/material/table';
+import { FormBuilder,Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
+import { Router} from '@angular/router';
 
 
 @Component({
@@ -11,7 +13,12 @@ import { UpdatepopupComponent } from '../updatepopup/updatepopup.component';
 })
 export class UsersComponent {
 
-  constructor(private authService: AuthService){
+  constructor(
+    private builder: FormBuilder, 
+    private toastr: ToastrService,
+    private authService: AuthService,
+    private router: Router
+    ){
     this.loadUser();
   }
 
@@ -25,15 +32,18 @@ export class UsersComponent {
     })
   }
   
-  updateUser(code:any){
-    
-
-    
-  }
-
-  openPopup(){
-
-
-  }
+  deleteUser(code:any){
+    this.authService.deleteUser(code).subscribe((res) => {
+      this.toastr.success('User deleted successfully');
+      setTimeout(() => {
+        location.reload()
+      }, 2000);
+    })
+   }
+  
+   updateUser(code:any){
+    this.router.navigate([`/update/${code}`]);
+   }
+  
 
 }

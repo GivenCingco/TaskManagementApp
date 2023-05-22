@@ -1,33 +1,74 @@
-import { Component } from '@angular/core';
-import { FormBuilder,Validators } from '@angular/forms';
+import { Component,OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from '../services/auth.service';
 import { Router} from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-updatepopup',
   templateUrl: './updatepopup.component.html',
-  styleUrls: ['./updatepopup.component.css']
+  styleUrls: ['./updatepopup.component.css'] 
 })
-export class UpdatepopupComponent {
+export class UpdatepopupComponent implements OnInit{
+  FormData!: FormGroup;
+  isLoading!: boolean;
+  user!:any;
+  code!:any;
 
   constructor(
     private builder: FormBuilder, 
     private toastr: ToastrService,
     private authService: AuthService,
-    private router: Router
-    ){}
+    private router: Router,
+    private route: ActivatedRoute
 
-     // Register Form
-     registerForm = this.builder.group({
-      id:this.builder.control('', Validators.compose([Validators.required,Validators.minLength(5)])),
-      name:this.builder.control('',Validators.required),
-      // firstname:this.builder.control('',Validators.required),
-      contact:this.builder.control('',Validators.required),
-      password: this.builder.control('', Validators.compose([Validators.required, Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}')])),
-      email:this.builder.control('',Validators.compose([Validators.required, Validators.email])),
-      // gender:this.builder.control('Male'),
-      role:this.builder.control(''),
-      status:this.builder.control(false),
-    });
+    ){}
+  ngOnInit(): void {
+
+    this.route.paramMap.subscribe((params) => {
+      this.code = params.get('code');
+      this.authService.getByCode(this.code).subscribe((res) => {
+      this.user = res;
+      this.FormData.patchValue(this.updateFormValues())
+      })
+    })
+
+    this.FormData = this.builder.group({
+      id: new FormControl(''),
+      username: new FormControl(''),
+      name: new FormControl(''),
+      email: new FormControl(''),
+      contact: new FormControl(''),
+      password: new FormControl(''),
+    })
+
+  }
+
+
+  onSubmit(formData:any){
+    this.authService.updateUser(this.code, formData).subscribe(res => {
+    this.toastr.success('Updated successfully')
+  
+    setTimeout(() => {
+       location.href = '/';
+    }, 2000);
+    })
+  }
+
+updateFormValues(){
+  return {
+    id:this.user.id,
+    username: this.user.username,
+    name: this.user.name,
+    email: this.user.email,
+    contact: this.user.contact,
+    password: this.user.password,
+  }
+}
+
+
+updateUser(){}
 }
