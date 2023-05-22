@@ -1,5 +1,11 @@
+/* body {
+  font-family: 'Montserrat', sans-serif;
+} */
+
 .table {
     border-radius: 1px; /* Rounded corners */
+    font-family: 'Montserrat', sans-serif;
+
   }
 
 .btn-button {

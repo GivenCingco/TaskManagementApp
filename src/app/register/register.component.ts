@@ -10,6 +10,13 @@ import { Router} from '@angular/router';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
+  visible:boolean = false;
+  changetype:boolean =true;
+
+  viewPass(){
+    this.visible = !this.visible;
+    this.changetype = !this.changetype;
+  }
 
   constructor(
     private builder: FormBuilder, 

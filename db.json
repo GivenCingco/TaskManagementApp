@@ -7,7 +7,8 @@
       "password": "Test$12345",
       "email": "johndoe@gmail.com",
       "role": "admin",
-      "status": true
+      "status": true,
+      "tasks": []
     },
     {
       "id": "user",
@@ -16,7 +17,9 @@
       "password": "Test$1234",
       "email": "doe@gmail.com",
       "role": "admin",
-      "status": true
+      "status": true,
+      "tasks": []
+
     }
   ],
   "role": [
@@ -32,5 +35,18 @@
       "code": "Finance",
       "name": "Finance"
     }
+  ],
+  "task":[
+    {
+      "id": 1,
+      "title": "Finish project",
+      "description": "Complete the project documentation",
+      "dueDate": "2023-05-31",
+      "status": "in progress",
+      "completed": false,
+      "userId": 1
+    }
+    
   ]
+
 }

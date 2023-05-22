@@ -11,6 +11,14 @@ import { Router} from '@angular/router';
 })
 export class LoginComponent {
 
+  visible:boolean = false;
+  changetype:boolean =true;
+
+  viewPass(){
+    this.visible = !this.visible;
+    this.changetype = !this.changetype;
+  }
+
    constructor(
     private builder: FormBuilder, 
     private toastr: ToastrService,
