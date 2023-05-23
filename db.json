@@ -19,34 +19,32 @@
       "role": "admin",
       "status": true,
       "tasks": []
-
     }
   ],
-  "role": [
-    {
-      "code": "HR",
-      "name": "HR"
-    },
-    {
-      "code": "IT",
-      "name": "IT"
-    },
-    {
-      "code": "Finance",
-      "name": "Finance"
-    }
-  ],
-  "task":[
+  "task": [
     {
       "id": 1,
-      "title": "Finish project",
+      "title": "Take a bath",
+      "description": "Complete the project documentation Complete the project documentation Complete the project documentation Complete the project documentation",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "title": "Angular",
+      "description": "Complete the project documentation",
+      "dueDate": "2023-05-31",
+      "status": "in progress",
+      "completed": false,
+      "userId": 1
+    },
+    {
+      "id": 3,
+      "title": "Angular",
       "description": "Complete the project documentation",
       "dueDate": "2023-05-31",
       "status": "in progress",
       "completed": false,
       "userId": 1
     }
-    
   ]
-
 }

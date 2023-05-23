@@ -14,6 +14,7 @@ import { UsersComponent } from './users/users.component';
 import { UpdatepopupComponent } from './updatepopup/updatepopup.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HeaderComponent } from './header/header.component';
+import { TaskComponent } from './task/task.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { HeaderComponent } from './header/header.component';
     UsersComponent,
     UpdatepopupComponent,
     NotFoundComponent,
-    HeaderComponent
+    HeaderComponent,
+    TaskComponent
   ],
   imports: [
     BrowserModule,

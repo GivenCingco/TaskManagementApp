@@ -8,6 +8,15 @@ import { Router} from '@angular/router';
   styleUrls: ['./not-found.component.css']
 })
 export class NotFoundComponent {
+  visible:boolean = false;
+  changetype:boolean =true;
+
+  viewPass(){
+    this.visible = !this.visible;
+    this.changetype = !this.changetype;
+  }
+
+
   constructor(
     private router: Router
     ){}

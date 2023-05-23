@@ -13,6 +13,15 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./updatepopup.component.css'] 
 })
 export class UpdatepopupComponent implements OnInit{
+  visible:boolean = false;
+  changetype:boolean =true;
+
+  viewPass(){
+    this.visible = !this.visible;
+    this.changetype = !this.changetype;
+  }
+
+
   FormData!: FormGroup;
   isLoading!: boolean;
   user!:any;

@@ -2,3 +2,35 @@
     font-family: 'Montserrat', sans-serif;
 
 }
+
+.password-requirements {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  .password-requirements ul {
+    margin: 5px 0 0 15px;
+    padding: 0;
+  }
+  .password-requirements li {
+    list-style-type: disc;
+  }
+  
+  .form-group{
+    position: relative;
+    width: 250px;
+  }
+
+  .form-group input {
+    border: 1px solid #ddd;
+    height: 40px;
+    padding: 0 15px;
+    border-radius:5px ;
+    font-size: 15px;
+    width: 100%;
+  }
+
+  .eyeicon {
+    position: absolute;
+    right: -0;
+    top: 10px;
+  }

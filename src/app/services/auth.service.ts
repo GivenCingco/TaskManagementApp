@@ -11,6 +11,7 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   apiURL = 'http://localhost:3000/user';
+  taskAPI = 'http://localhost:3000/task';
 
   //List all users
   getUsers(){
@@ -54,5 +55,20 @@ export class AuthService {
   }
 
 
+//Get all tasks
+getTasks(){
+  return  this.http.get(this.taskAPI);
 }
- 
+
+//Delete task
+deleteTask(code:any){
+  return this.http.delete(this.taskAPI + '/' + code);
+}
+
+  //Update task details
+  updateTask(code:any,inputdata:any){
+    return this.http.patch(`${this.taskAPI}/${code}`, inputdata);
+
+}
+
+}
