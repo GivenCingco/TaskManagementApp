@@ -23,7 +23,7 @@ export class TaskComponent {
   }
 
  // Task Form
- taskForm = this.builder.group({
+  taskForm = this.builder.group({
   id:this.builder.control('', Validators.compose([Validators.required,Validators.minLength(5)])),
   userId:this.builder.control('', Validators.compose([Validators.required,Validators.minLength(5)])),
   name:this.builder.control('',Validators.required),
